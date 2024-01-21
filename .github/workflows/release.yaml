@@ -1,4 +1,4 @@
-name: Draft release
+name: Release
 
 on:
   workflow_dispatch:
@@ -93,7 +93,7 @@ jobs:
           echo "本人不承担您因为使用此文件所造成的一切后果^_^..." >> /tmp/xx.md
           git log -"1" --format="- %H %s" | sed '/^$/d' >> /tmp/xx.md
           git tag -d ${{ env.VERSION }} || true
-          git push --delete origin $VERSION || true
+          git push --delete origin ${{ env.VERSION }} || true
           git push --force origin ${{ github.ref }} || true
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
