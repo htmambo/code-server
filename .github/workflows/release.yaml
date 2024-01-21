@@ -110,15 +110,6 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
           artifacts: /tmp/release/*
 
-      - name: 删除以前的发布
-        # if: github.event_name == 'release'
-        uses: dev-drprasad/delete-older-releases@v0.3.2
-        with:
-          repo: htmambo/NootedRed
-          keep_latest: 5
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
   npm-package:
     name: Upload npm package
     runs-on: ubuntu-latest
