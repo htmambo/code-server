@@ -19,9 +19,9 @@ main() {
 
   release_archive
 
-  if [[ $OS == "linux" ]]; then
-    release_nfpm
-  fi
+  # if [[ $OS == "linux" ]]; then
+  #   release_nfpm
+  # fi
 }
 
 release_archive() {
