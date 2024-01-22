@@ -108,7 +108,7 @@ jobs:
         # if: github.event_name == 'release'
         uses: ncipollo/release-action@v1.12.0
         with:
-          prerelease: true
+          # prerelease: true
           tag: "${{ env.VERSION }}"
           name: Build ${{ env.VERSION }}
           bodyFile: /tmp/xx.md
